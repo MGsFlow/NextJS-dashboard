@@ -1,0 +1,184 @@
+:root{
+  --Primary-50: #fbfeff; 
+  --Primary-75:#f5f9fa;
+  --Primary-100: #eefaff; 
+  --Primary-200: #d8f5ff; 
+  --Primary-300: #baedff; 
+  --Primary-400: #93e2ff; 
+  --Primary-500: #64d6ff; 
+  --Primary-600: #2cc7ff; 
+  --Primary-700: #00aceb; 
+  --Primary-800: #006185; 
+  --Primary-900: #003447; 
+  --Primary-950: #002533;
+
+  --Secondary-50: #fffdfb; 
+  --Secondary-100: #fff5ee; 
+  --Secondary-200: #ffe9d9; 
+  --Secondary-300: #ffd8bb; 
+  --Secondary-400: #ffc195; 
+  --Secondary-500: #ffa667; 
+  --Secondary-600: #ff8630; 
+  --Secondary-700: #f06400; 
+  --Secondary-800: #873800; 
+  --Secondary-900: #481e00; 
+  --Secondary-950: #331500;
+
+  --Gray-50: #fcfcfc; 
+  --Gray-100: #f3f3f3; 
+  --Gray-200: #e5e5e5; 
+  --Gray-300: #d0d0d0; 
+  --Gray-400: #b6b6b6; 
+  --Gray-500: #969696; 
+  --Gray-600: #707070; 
+  --Gray-700: #454545; 
+  --Gray-800: #2d2d2d; 
+  --Gray-900: #1e1e1e; 
+  --Gray-950: #1a1a1a; 
+
+  /* Design System */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 16px;
+  --border-radius-xl: 24px;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+
+  --transition: all 0.2s ease-in-out;
+}
+
+/* 폰트 */
+@font-face {
+font-family: "Meiryo";
+src: url("/fonts/meiryo.ttf") format("ttf");
+font-weight: 400;
+font-style: normal;
+}
+
+html {
+font-family: "Meiryo" !important;
+}
+
+body {
+  background-color: var(--Primary-50);
+  color: var(--Gray-900);
+  line-height: 1.5;
+}
+
+/* 기본 컴포넌트 스타일 */
+.card {
+  background: white;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-md);
+  padding: var(--spacing-lg);
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.button {
+  background-color: var(--Primary-700);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  cursor: pointer;
+  transition: var(--transition);
+  font-weight: 500;
+}
+
+.button:hover {
+  background-color: var(--Primary-800);
+  transform: translateY(-1px);
+}
+
+.input {
+  border: 1px solid var(--Gray-200);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-sm) var(--spacing-md);
+  transition: var(--transition);
+  width: 100%;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--Primary-700);
+  box-shadow: 0 0 0 3px var(--Primary-200);
+}
+
+/* Material-UI 커스텀 스타일 */
+.MuiTypography-root {
+font-family: "Meiryo" !important;
+}
+
+.MuiButton-root {
+  border-radius: var(--border-radius-md) !important;
+  text-transform: none !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+.MuiPaper-root {
+  border-radius: var(--border-radius-md) !important;
+  box-shadow: var(--shadow-md) !important;
+}
+
+.MuiCard-root {
+  border-radius: var(--border-radius-md) !important;
+  transition: var(--transition) !important;
+}
+
+.MuiCard-root:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg) !important;
+}
+
+/* Layout 컴포넌트 */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+}
+
+.grid {
+  display: grid;
+  gap: var(--spacing-lg);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* Navigation */
+.nav {
+  background: white;
+  box-shadow: var(--shadow-sm);
+  padding: var(--spacing-md) var(--spacing-lg);
+}
+
+.nav-link {
+  color: var(--Gray-700);
+  text-decoration: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  transition: var(--transition);
+}
+
+.nav-link:hover {
+  background-color: var(--Primary-100);
+  color: var(--Primary-700);
+}
+
+.nav-link.active {
+  background-color: var(--Primary-700);
+  color: white;
+}
+
+
